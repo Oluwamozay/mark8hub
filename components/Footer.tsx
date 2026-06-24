@@ -1,80 +1,130 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-[#1E293B] py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company */}
+    <footer className="bg-[#1E293B] text-white py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Column 1: Mark8Hub */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Mark8Hub</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-slate-300 hover:text-[#EA580C] transition-colors">About</Link></li>
-              <li><Link href="/blog" className="text-slate-300 hover:text-[#EA580C] transition-colors">Blog</Link></li>
-              <li><Link href="/careers" className="text-slate-300 hover:text-[#EA580C] transition-colors">Careers</Link></li>
-              <li><Link href="/press" className="text-slate-300 hover:text-[#EA580C] transition-colors">Press</Link></li>
+              <li>
+                <Link href="/about" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/press" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Press
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Column 2: Shop */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Shop</h3>
             <ul className="space-y-2">
-              <li><Link href="/help" className="text-slate-300 hover:text-[#EA580C] transition-colors">Help Center</Link></li>
-              <li><Link href="/contact" className="text-slate-300 hover:text-[#EA580C] transition-colors">Contact</Link></li>
-              <li><Link href="/privacy" className="text-slate-300 hover:text-[#EA580C] transition-colors">Privacy</Link></li>
-              <li><Link href="/terms" className="text-slate-300 hover:text-[#EA580C] transition-colors">Terms</Link></li>
+              <li>
+                <Link href="/products" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  All Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/categories" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link href="/deals" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Deals
+                </Link>
+              </li>
+              <li>
+                <Link href="/new-arrivals" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  New Arrivals
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Marketplace */}
+          {/* Column 3: Sell */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Marketplace</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Sell</h3>
             <ul className="space-y-2">
-              <li><Link href="/products" className="text-slate-300 hover:text-[#EA580C] transition-colors">All Products</Link></li>
-              <li><Link href="/products" className="text-slate-300 hover:text-[#EA580C] transition-colors">Categories</Link></li>
-              <li><Link href="/resell" className="text-slate-300 hover:text-[#EA580C] transition-colors">Resell</Link></li>
-              <li><Link href="/ads" className="text-slate-300 hover:text-[#EA580C] transition-colors">Advertise</Link></li>
+              <li>
+                <Link href="/sell" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Start Selling
+                </Link>
+              </li>
+              <li>
+                <Link href="/seller-dashboard" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Seller Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link href="/advertise" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Advertise
+                </Link>
+              </li>
+              <li>
+                <Link href="/resell" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Resell
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Column 4: Support */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
-            <div className="flex gap-2 mb-4">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-3 py-2 rounded-lg bg-slate-700 text-white placeholder-slate-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-[#EA580C] text-sm"
-              />
-              <button className="px-4 py-2 bg-[#EA580C] text-white rounded-lg font-medium text-sm hover:bg-[#d04d0a] transition-colors">
-                Subscribe
-              </button>
-            </div>
-            <div className="flex gap-4">
-              <a href="#" className="text-slate-300 hover:text-[#EA580C] transition-colors" aria-label="Facebook">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-300 hover:text-[#EA580C] transition-colors" aria-label="Twitter">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-slate-300 hover:text-[#EA580C] transition-colors" aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Support</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/help" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-slate-400 hover:text-[#EA580C] transition-colors text-sm">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-slate-700">
-          <p className="text-center text-slate-400 text-sm">
+        {/* Bottom Copyright */}
+        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+          <p className="text-slate-400 text-sm">
             &copy; 2026 Mark8Hub. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
