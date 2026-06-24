@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --mark8-orange: #EA580C; --mark8-navy: #1E293B; --mark8-orange-light: #FFF7ED; }
+  body { @apply bg-white text-slate-900; }
+}
+
+@layer components {
+  .btn-primary { @apply bg-[#EA580C] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition-colors; }
+  .btn-secondary { @apply bg-[#1E293B] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-slate-800 transition-colors; }
+  .btn-outline { @apply border-2 border-[#EA580C] text-[#EA580C] px-6 py-2 rounded-lg font-medium hover:bg-[#EA580C] hover:text-white transition-colors; }
+  .card { @apply bg-white rounded-xl shadow-sm border border-slate-100; }
+  .input-field { @apply w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#EA580C] focus:border-transparent; }
+}
